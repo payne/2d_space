@@ -1,4 +1,3 @@
-import update from './update.js';
 import TextClock from './matt1';
 
 
@@ -12,5 +11,4 @@ console.log('if you have sourcemaps enabled in your devtools, click on main.js:5
     tc.start();
 });
 
-update();
 

@@ -1,8 +1,4 @@
-# rollup-starter-app
-
-This repo contains a bare-bones example of how to create an application using Rollup, including importing a module from `node_modules` and converting it from CommonJS.
-
-*See also https://github.com/rollup/rollup-starter-lib*
+# 2d_space - a simple space game
 
 
 ## Getting started
@@ -10,13 +6,8 @@ This repo contains a bare-bones example of how to create an application using Ro
 Clone this repository and install its dependencies:
 
 ```bash
-git clone https://github.com/rollup/rollup-starter-app
-cd rollup-starter-app
-npm install
-
-# or
-npx degit "rollup/rollup-starter-app" my-app
-cd my-app
+git clone https://github.com/payne/2d_space
+cd 2d_space
 npm install
 ```
 
@@ -33,3 +24,8 @@ The `public/index.html` file contains a `<script src='bundle.js'>` tag, which me
 ## License
 
 [MIT](LICENSE).
+
+## History:
+1. Started with the https://github.com/rollup/rollup-starter-lib
+2. Forked it to my github account and google/learned about using an ES6 `=>` function
+

@@ -1234,13 +1234,6 @@
 
   var format_1 = format;
 
-  var span = document.querySelector('#time-now');
-
-  function update() {
-  	span.textContent = format_1(new Date(), 'h:mm:ssa');
-  	setTimeout(update, 1000);
-  }
-
   class TextClock {
       constructor(span, delta) {
           this.span=span;
@@ -1277,8 +1270,6 @@
       const tc = new TextClock(span,60*spanNumber*10*1000);
       tc.start();
   });
-
-  update();
 
 }());
 //# sourceMappingURL=bundle.js.map
