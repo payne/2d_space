@@ -1,4 +1,5 @@
 import Invader from './invader';
+import Defender from './defender';
 
 export default class Game {
     constructor(canvas) {
@@ -10,7 +11,8 @@ export default class Game {
         this.height = canvas.height;
         this.things=[
             new Invader(10,10),
-            new Invader(30,30)
+            new Invader(30,30),
+            new Defender(0,this.height-20)
         ];
 
     }
