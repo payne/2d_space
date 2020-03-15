@@ -1,3 +1,4 @@
+import Invader from './invader';
 
 export default class Game {
     constructor(canvas) {
@@ -7,6 +8,11 @@ export default class Game {
         this.ctx = canvas.getContext('2d');
         this.width = canvas.width;
         this.height = canvas.height;
+        this.things=[
+            new Invader(10,10),
+            new Invader(30,30)
+        ];
+
     }
 
     updateGame(ctx,width,height) {
@@ -17,6 +23,7 @@ export default class Game {
         ctx.fillRect(0, 0, width, height);
         console.log(`set filStyle=${color}`);
         console.log(`ctx.fillRect(0, 0, ${width}, ${height});`);
+        this.things.forEach(t => t.update(ctx));
     }
 
     start() {
