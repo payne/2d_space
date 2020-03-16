@@ -7,6 +7,6 @@ console.log('if you have sourcemaps enabled in your devtools, click on main.js:5
 
 const canvas = document.querySelector(`#canvas`);
 const game = new Game(canvas);
-game.start();
+game.tick();
 
 

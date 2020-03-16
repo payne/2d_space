@@ -4,32 +4,28 @@ import Defender from './defender';
 export default class Game {
     constructor(canvas) {
         this.canvas=canvas;
-        this.colors=['red','green','blue'];
-        this.colorNumber=0;
         this.ctx = canvas.getContext('2d');
         this.width = canvas.width;
         this.height = canvas.height;
+        this.invaderDirection=1; // TODO(MGP): Smells like a global!  fix!?
         this.things=[
-            new Invader(10,10),
-            new Invader(30,30),
             new Defender(0,this.height-20)
         ];
+        const numCols=15;
+        const invaderWidth = this.width / numCols - 3;
+        const rowGap=15;
+        for (let row=0; row < 3; row ++) {
+            for (let col=0; col < numCols; col++) {
+               this.things.push(new Invader(col*invaderWidth, row*10+row*rowGap, this));
+            }
+        }
 
     }
 
     updateGame(ctx,width,height) {
-        const color = this.colors[this.colorNumber];
-        this.colorNumber++;
-        this.colorNumber %= this.colors.length;
-        ctx.fillStyle = color;
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, width, height);
-        console.log(`set filStyle=${color}`);
-        console.log(`ctx.fillRect(0, 0, ${width}, ${height});`);
         this.things.forEach(t => t.update(ctx));
-    }
-
-    start() {
-       this.tick()
     }
 
     tick() {
