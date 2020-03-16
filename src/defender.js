@@ -1,4 +1,3 @@
-
 export default class Defender {
     constructor(x, y) {
         this.x = x;
@@ -21,9 +20,9 @@ export default class Defender {
     }
 
     update(ctx) {
-        this.x%=ctx.canvas.width;
-        ctx.fillStyle='blue';
-        ctx.fillRect(this.x,this.y,10,10);
+        this.x %= ctx.canvas.width;
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(this.x, this.y, 10, 10);
     }
 
 }
