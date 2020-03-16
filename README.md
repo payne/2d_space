@@ -1,5 +1,7 @@
 # 2d_space - a simple space game
 
+To play: https://payne.github.io/2d_space/ thanks to github pages.
+
 
 ## Getting started
 
