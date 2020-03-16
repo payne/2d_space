@@ -29,10 +29,9 @@ export default class Game {
     }
 
     tick() {
-        setTimeout(() => {
+        setInterval(() => {
             this.updateGame(this.ctx, this.width, this.height);
-            this.tick();
-        }, 1000);
+        }, 200);
     }
 }
 
