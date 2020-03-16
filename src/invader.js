@@ -17,6 +17,6 @@ export default class Invader {
         }
 
         this.x%=ctx.canvas.width;
-        this.y%=ctx.canvas.height;
+        this.y%=(ctx.canvas.height-100); // Can only get so close to bottom
     }
 }
