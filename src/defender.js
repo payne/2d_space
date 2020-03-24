@@ -1,7 +1,10 @@
+import DefenderMissile from './defenderMissile';
+
 export default class Defender {
     constructor(x, y) {
         this.x = x;
         this.y = y;
+        this.gamingPieces = null;
         this.delta = {
             "ArrowRight": 1,
             "ArrowLeft": -1
@@ -16,6 +19,9 @@ export default class Defender {
     keyDownHandler(e) {
         if (e.key in this.delta) {
             this.x += this.delta[e.key];
+        } else if (e.key === ' ') {
+           console.log('Space means shoot!')
+           this.gamingPieces.push(new DefenderMissile(this.x,this.y-10));
         }
     }
 
